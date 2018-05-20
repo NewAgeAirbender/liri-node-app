@@ -7,9 +7,8 @@ var Spotify = require('node-spotify-api');
 var fs = require("fs");
 
 //makes it easier to read
-var divider ="\n------------------------------------------------------------\n\n";
+var divider = "\n------------------------------------------------------------\n\n";
 
-var chosen = process.argv[2];
 //empty variable for multiple word movie or song title inputs
 var nodeArgs = process.argv;
 //variable for the first param - command
@@ -25,22 +24,27 @@ for (var i = 3; i < nodeArgs.length; i++) {
     }
 };
 
-switch (chosen) {
-    case 'my-tweets':
-        tweetIt();
-        break;
-    case 'spotify-this-song':
-        songIt(title);
-        break;
-    case 'movie-this':
-        movieIt(title);
-        break;
-    case 'do-what-it-says':
-        doIt();
-        break;
+doSomething(chosen, title);
+
+//need to include the default cases
+function doSomething(chosen, title) {
+    switch (chosen) {
+        case 'my-tweets':
+            tweetIt();
+            break;
+        case 'spotify-this-song':
+            songIt(title);
+            break;
+        case 'movie-this':
+            movieIt(title);
+            break;
+        case 'do-what-it-says':
+            doIt();
+            break;
+    }
 }
 
-//doesn't fucking work. Something about the query parameters missing??
+//pulls maybe 20 tweets from my fake twitter
 function tweetIt() {
     var client = new Twitter(keys.twitter);
 
@@ -49,7 +53,7 @@ function tweetIt() {
     client.get(
         'statuses/user_timeline/', name, function (error, tweets, response) {
             if (!error) {
-                for (var i = 0; i <tweets.length; i++){
+                for (var i = 0; i < tweets.length; i++) {
                     console.log([i + 1] + '. ' + tweets[i].text);
                     console.log('Tweeted on: ' + tweets[i].created_at);
                     console.log(divider);
@@ -108,7 +112,7 @@ function movieIt(title) {
     var URL = "http://www.omdbapi.com/?apikey=trilogy&t=" + title;
 
     //requests, saves the info, then logs it to file
-    request(URL, function(err, response, body) { 
+    request(URL, function (err, response, body) {
         var data = JSON.parse(body);
         //console.log(data);
 
@@ -123,7 +127,7 @@ function movieIt(title) {
             "Players: " + data.Actors
         ].join('\n');
 
-        fs.appendFile('log.txt', movieData + divider, function(err) {
+        fs.appendFile('log.txt', movieData + divider, function (err) {
             if (err) throw err;
             console.log(movieData);
         });
@@ -132,7 +136,17 @@ function movieIt(title) {
 }
 
 //function that pulls from the random file
+//need this to work properly to be done
 function doIt() {
 
-    fs.read('random.txt',);
+    fs.readFile("random.txt", "utf8", function (error, data) {
+
+        if (error) {
+            return console.log(error);
+        }
+
+        var dataArr = data.split(",");
+        console.log(dataArr);
+        doSomething(dataArr[0], dataArr[2]);
+    });
 }
