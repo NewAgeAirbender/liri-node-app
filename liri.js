@@ -45,15 +45,18 @@ function tweetIt() {
     var client = new Twitter(keys.twitter);
 
     var myTwitter = 997195376393322497;
-    var name = { id: myTwitter, count: 20 };
+    var name = { follow: myTwitter, count: 20 };
     client.get(
-        'search/tweets', name, function (error, tweets, response) {
+        'statuses/user_timeline/', name, function (error, tweets, response) {
             if (!error) {
-                console.log(tweets);
+                for (var i = 0; i <tweets.length; i++){
+                    console.log([i + 1] + '. ' + tweets[i].text);
+                    console.log('Tweeted on: ' + tweets[i].created_at);
+                    console.log(divider);
+                }
             } else {
                 console.log("You have issues.");
                 console.log(error);
-                console.log(response);
             }
 
         });
@@ -126,4 +129,10 @@ function movieIt(title) {
         });
     });
 
+}
+
+//function that pulls from the random file
+function doIt() {
+
+    fs.read('random.txt',);
 }
