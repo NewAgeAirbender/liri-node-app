@@ -28,3 +28,13 @@ Plot: Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, inc
 Players: Benicio Del Toro, Dennis Farina, Vinnie Jones, Brad Pitt
 ------------------------------------------------------------
 
+Movie: The Matrix
+Released: 31 Mar 1999
+IMDB Rating: 8.7/10
+Rotten Tomatos Rating: 87%
+Country of Origin: USA
+Language: English
+Plot: A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+Players: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
+------------------------------------------------------------
+

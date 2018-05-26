@@ -147,6 +147,6 @@ function doIt() {
 
         var dataArr = data.split(",");
         console.log(dataArr);
-        doSomething(dataArr[0], dataArr[2]);
+        doSomething(dataArr[0], dataArr[1]);
     });
 }
