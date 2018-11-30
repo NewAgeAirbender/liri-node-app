@@ -38,3 +38,23 @@ Plot: A computer hacker learns from mysterious rebels about the true nature of h
 Players: Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving
 ------------------------------------------------------------
 
+Movie: It
+Released: 08 Sep 2017
+IMDB Rating: 7.4/10
+Rotten Tomatos Rating: 85%
+Country of Origin: USA, Canada
+Language: English
+Plot: In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.
+Players: Jaeden Lieberher, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard
+------------------------------------------------------------
+
+Movie: Star Wars: Episode VI - Return of the Jedi
+Released: 25 May 1983
+IMDB Rating: 8.3/10
+Rotten Tomatos Rating: 80%
+Country of Origin: USA
+Language: English
+Plot: After a daring mission to rescue Han Solo from Jabba the Hutt, the rebels dispatch to Endor to destroy a more powerful Death Star. Meanwhile, Luke struggles to help Vader back from the dark side without falling into the Emperor's trap.
+Players: Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams
+------------------------------------------------------------
+
